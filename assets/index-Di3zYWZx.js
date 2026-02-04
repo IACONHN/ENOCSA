@@ -33,7 +33,7 @@
 `,f=`<section id="about" class="about">\r
     <div class="container about-container">\r
         <div class="about-img">\r
-            <img src="/images/enocsa4.jpeg" alt="Equipo ENOCSA">\r
+            <img src="./images/enocsa4.jpeg" alt="Equipo ENOCSA">\r
         </div>\r
         <div class="about-text">\r
             <h2><strong>Sobre Nosotros</strong></h2>\r
