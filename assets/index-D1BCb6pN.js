@@ -242,17 +242,17 @@
 \r
       <div class="portfolio-card">\r
         <div class="card-images">\r
-          <img src="/images/proyectos24/subestacion/estacion1.jpeg" class="active" alt="ESTACION1">\r
-          <img src="/images/proyectos24/subestacion/estacion2.jpeg" class="active" alt="ESTACION2">\r
-          <img src="/images/proyectos24/subestacion/estacion3.jpeg" class="active" alt="ESTACION3">\r
-          <img src="/images/proyectos24/subestacion/estacion4.jpeg" class="active" alt="ESTACION4">\r
-          <img src="/images/proyectos24/subestacion/estacion5.jpeg" class="active" alt="ESTACION5">\r
-          <img src="/images/proyectos24/subestacion/estacion6.jpeg" class="active" alt="ESTACION6">\r
-          <img src="/images/proyectos24/subestacion/estacion7.jpeg" class="active" alt="ESTACION7">\r
-          <img src="/images/proyectos24/subestacion/estacion8.jpeg" class="active" alt="ESTACION8">\r
-          <img src="/images/proyectos24/subestacion/estacion9.jpeg" class="active" alt="ESTACION9">\r
-          <img src="/images/proyectos24/subestacion/estacion10.jpeg" class="active" alt="ESTACION10">\r
-          <img src="/images/proyectos24/subestacion/estacion11.jpeg" class="active" alt="ESTACION11">\r
+          <img src="../images/proyectos24/subestacion/estacion1.jpeg" class="active" alt="ESTACION1">\r
+          <img src="../images/proyectos24/subestacion/estacion2.jpeg" class="active" alt="ESTACION2">\r
+          <img src="../images/proyectos24/subestacion/estacion3.jpeg" class="active" alt="ESTACION3">\r
+          <img src="../images/proyectos24/subestacion/estacion4.jpeg" class="active" alt="ESTACION4">\r
+          <img src="../images/proyectos24/subestacion/estacion5.jpeg" class="active" alt="ESTACION5">\r
+          <img src="../images/proyectos24/subestacion/estacion6.jpeg" class="active" alt="ESTACION6">\r
+          <img src="../images/proyectos24/subestacion/estacion7.jpeg" class="active" alt="ESTACION7">\r
+          <img src="../images/proyectos24/subestacion/estacion8.jpeg" class="active" alt="ESTACION8">\r
+          <img src="../images/proyectos24/subestacion/estacion9.jpeg" class="active" alt="ESTACION9">\r
+          <img src="../images/proyectos24/subestacion/estacion10.jpeg" class="active" alt="ESTACION10">\r
+          <img src="../images/proyectos24/subestacion/estacion11.jpeg" class="active" alt="ESTACION11">\r
           <div class="card-buttons">\r
             <button class="prev">&#10094;</button>\r
             <button class="next">&#10095;</button>\r
