@@ -1,0 +1,34 @@
+// Tipografía y body
+body {
+  font-family: @font-main;
+  color: @gris-piedra;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @font-main;
+  font-weight: 600;
+  color: @azul-profundo;
+  margin-bottom: 1rem;
+}
+
+// Secciones
+section {
+  padding: @padding-section 2rem;
+}
+
+// Contenedor principal
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Espaciado y uniformidad en grids
+.services-grid,
+.portfolio-grid {
+  display: grid;
+  gap: 2rem;
+}
+
