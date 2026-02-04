@@ -2,7 +2,7 @@
     <div class="container">
         <div class="logo">
             <a href="index.html">
-                <img src="/images/logo.png" alt="Logo Enocsa">
+                <img src="../images/logo.png" alt="Logo Enocsa">
             </a>
         </div>
 
@@ -185,52 +185,52 @@
 
       <div class="portfolio-card">
         <div class="card-images">
-          <img src="/images/proyectos23/fusami/fusami1.jpg" class="active" alt="FUSAMI1">
-          <img src="/images/proyectos23/fusami/fusami2.jpg" class="active" alt="FUSAMI2">
-          <img src="/images/proyectos23/fusami/fusami3.jpg" class="active" alt="FUSAMI3">
-          <img src="/images/proyectos23/fusami/fusami4.jpg" class="active" alt="FUSAMI4">
-          <img src="/images/proyectos23/fusami/fusami5.jpg" class="active" alt="FUSAMI5">
-          <img src="/images/proyectos23/fusami/fusami6.jpg" class="active" alt="FUSAMI6">
-          <img src="/images/proyectos23/fusami/fusami7.jpg" class="active" alt="FUSAMI7">
-          <img src="/images/proyectos23/fusami/fusami8.jpg" class="active" alt="FUSAMI8">
-          <img src="/images/proyectos23/fusami/fusami9.jpg" class="active" alt="FUSAMI9">
-          <img src="/images/proyectos23/fusami/fusami10.jpg" class="active" alt="FUSAMI10">
-          <img src="/images/proyectos23/fusami/fusami11.jpg" class="active" alt="FUSAMI11">
-          <img src="/images/proyectos23/fusami/fusami12.jpg" class="active" alt="FUSAMI12">
-          <img src="/images/proyectos23/fusami/fusami13.jpg" class="active" alt="FUSAMI13">
-          <img src="/images/proyectos23/fusami/fusami14.jpg" class="active" alt="FUSAMI14">
-          <img src="/images/proyectos23/fusami/fusami15.jpg" class="active" alt="FUSAMI15">
-          <img src="/images/proyectos23/fusami/fusami16.jpg" class="active" alt="FUSAMI16">
-          <img src="/images/proyectos23/fusami/fusami17.jpg" class="active" alt="FUSAMI17">
-          <img src="/images/proyectos23/fusami/fusami18.jpg" class="active" alt="FUSAMI18">
-          <img src="/images/proyectos23/fusami/fusami19.jpg" class="active" alt="FUSAMI19">
-          <img src="/images/proyectos23/fusami/fusami20.jpg" class="active" alt="FUSAMI20">
-          <img src="/images/proyectos23/fusami/fusami21.jpg" class="active" alt="FUSAMI21">
-          <img src="/images/proyectos23/fusami/fusami22.jpg" class="active" alt="FUSAMI22">
-          <img src="/images/proyectos23/fusami/fusami23.jpg" class="active" alt="FUSAMI23">
-          <img src="/images/proyectos23/fusami/fusami24.jpg" class="active" alt="FUSAMI24">
-          <img src="/images/proyectos23/fusami/fusami25.jpg" class="active" alt="FUSAMI25">
-          <img src="/images/proyectos23/fusami/fusami26.jpg" class="active" alt="FUSAMI26">
-          <img src="/images/proyectos23/fusami/fusami27.jpg" class="active" alt="FUSAMI27">
-          <img src="/images/proyectos23/fusami/fusami28.jpg" class="active" alt="FUSAMI28">
-          <img src="/images/proyectos23/fusami/fusami29.jpg" class="active" alt="FUSAMI29">
-          <img src="/images/proyectos23/fusami/fusami30.jpg" class="active" alt="FUSAMI30">
-          <img src="/images/proyectos23/fusami/fusami31.jpg" class="active" alt="FUSAMI31">
-          <img src="/images/proyectos23/fusami/fusami32.jpg" class="active" alt="FUSAMI32">
-          <img src="/images/proyectos23/fusami/fusami33.jpg" class="active" alt="FUSAMI33">
-          <img src="/images/proyectos23/fusami/fusami34.jpg" class="active" alt="FUSAMI34">
-          <img src="/images/proyectos23/fusami/fusami35.jpg" class="active" alt="FUSAMI35">
-          <img src="/images/proyectos23/fusami/fusami36.jpg" class="active" alt="FUSAMI36">
-          <img src="/images/proyectos23/fusami/fusami37.jpg" class="active" alt="FUSAMI37">
-          <img src="/images/proyectos23/fusami/fusami38.jpg" class="active" alt="FUSAMI38">
-          <img src="/images/proyectos23/fusami/fusami39.jpg" class="active" alt="FUSAMI39">
-          <img src="/images/proyectos23/fusami/fusami40.jpg" class="active" alt="FUSAMI40">
-          <img src="/images/proyectos23/fusami/fusami41.jpg" class="active" alt="FUSAMI41">
-          <img src="/images/proyectos23/fusami/fusami42.jpg" class="active" alt="FUSAMI42">
-          <img src="/images/proyectos23/fusami/fusami43.jpg" class="active" alt="FUSAMI43">
-          <img src="/images/proyectos23/fusami/fusami44.jpg" class="active" alt="FUSAMI44">
-          <img src="/images/proyectos23/fusami/fusami45.jpg" class="active" alt="FUSAMI45">
-          <img src="/images/proyectos23/fusami/fusami46.jpg" class="active" alt="FUSAMI46">
+          <img src="../images/proyectos23/fusami/fusami1.jpg" class="active" alt="FUSAMI1">
+          <img src="../images/proyectos23/fusami/fusami2.jpg" class="active" alt="FUSAMI2">
+          <img src="../images/proyectos23/fusami/fusami3.jpg" class="active" alt="FUSAMI3">
+          <img src="../images/proyectos23/fusami/fusami4.jpg" class="active" alt="FUSAMI4">
+          <img src="../images/proyectos23/fusami/fusami5.jpg" class="active" alt="FUSAMI5">
+          <img src="../images/proyectos23/fusami/fusami6.jpg" class="active" alt="FUSAMI6">
+          <img src="../images/proyectos23/fusami/fusami7.jpg" class="active" alt="FUSAMI7">
+          <img src="../images/proyectos23/fusami/fusami8.jpg" class="active" alt="FUSAMI8">
+          <img src="../images/proyectos23/fusami/fusami9.jpg" class="active" alt="FUSAMI9">
+          <img src="../images/proyectos23/fusami/fusami10.jpg" class="active" alt="FUSAMI10">
+          <img src="../images/proyectos23/fusami/fusami11.jpg" class="active" alt="FUSAMI11">
+          <img src="../images/proyectos23/fusami/fusami12.jpg" class="active" alt="FUSAMI12">
+          <img src="../images/proyectos23/fusami/fusami13.jpg" class="active" alt="FUSAMI13">
+          <img src="../images/proyectos23/fusami/fusami14.jpg" class="active" alt="FUSAMI14">
+          <img src="../images/proyectos23/fusami/fusami15.jpg" class="active" alt="FUSAMI15">
+          <img src="../images/proyectos23/fusami/fusami16.jpg" class="active" alt="FUSAMI16">
+          <img src="../images/proyectos23/fusami/fusami17.jpg" class="active" alt="FUSAMI17">
+          <img src="../images/proyectos23/fusami/fusami18.jpg" class="active" alt="FUSAMI18">
+          <img src="../images/proyectos23/fusami/fusami19.jpg" class="active" alt="FUSAMI19">
+          <img src="../images/proyectos23/fusami/fusami20.jpg" class="active" alt="FUSAMI20">
+          <img src="../images/proyectos23/fusami/fusami21.jpg" class="active" alt="FUSAMI21">
+          <img src="../images/proyectos23/fusami/fusami22.jpg" class="active" alt="FUSAMI22">
+          <img src="../images/proyectos23/fusami/fusami23.jpg" class="active" alt="FUSAMI23">
+          <img src="../images/proyectos23/fusami/fusami24.jpg" class="active" alt="FUSAMI24">
+          <img src="../images/proyectos23/fusami/fusami25.jpg" class="active" alt="FUSAMI25">
+          <img src="../images/proyectos23/fusami/fusami26.jpg" class="active" alt="FUSAMI26">
+          <img src="../images/proyectos23/fusami/fusami27.jpg" class="active" alt="FUSAMI27">
+          <img src="../images/proyectos23/fusami/fusami28.jpg" class="active" alt="FUSAMI28">
+          <img src="../images/proyectos23/fusami/fusami29.jpg" class="active" alt="FUSAMI29">
+          <img src="../images/proyectos23/fusami/fusami30.jpg" class="active" alt="FUSAMI30">
+          <img src="../images/proyectos23/fusami/fusami31.jpg" class="active" alt="FUSAMI31">
+          <img src="../images/proyectos23/fusami/fusami32.jpg" class="active" alt="FUSAMI32">
+          <img src="../images/proyectos23/fusami/fusami33.jpg" class="active" alt="FUSAMI33">
+          <img src="../images/proyectos23/fusami/fusami34.jpg" class="active" alt="FUSAMI34">
+          <img src="../images/proyectos23/fusami/fusami35.jpg" class="active" alt="FUSAMI35">
+          <img src="../images/proyectos23/fusami/fusami36.jpg" class="active" alt="FUSAMI36">
+          <img src="../images/proyectos23/fusami/fusami37.jpg" class="active" alt="FUSAMI37">
+          <img src="../images/proyectos23/fusami/fusami38.jpg" class="active" alt="FUSAMI38">
+          <img src="../images/proyectos23/fusami/fusami39.jpg" class="active" alt="FUSAMI39">
+          <img src="../images/proyectos23/fusami/fusami40.jpg" class="active" alt="FUSAMI40">
+          <img src="../images/proyectos23/fusami/fusami41.jpg" class="active" alt="FUSAMI41">
+          <img src="../images/proyectos23/fusami/fusami42.jpg" class="active" alt="FUSAMI42">
+          <img src="../images/proyectos23/fusami/fusami43.jpg" class="active" alt="FUSAMI43">
+          <img src="../images/proyectos23/fusami/fusami44.jpg" class="active" alt="FUSAMI44">
+          <img src="../images/proyectos23/fusami/fusami45.jpg" class="active" alt="FUSAMI45">
+          <img src="../images/proyectos23/fusami/fusami46.jpg" class="active" alt="FUSAMI46">
           <div class="card-buttons">
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
@@ -630,7 +630,7 @@
   <button id="nextModal" class="modal-btn next">&#10095;</button>
 </div>`,P=`<footer id="contact">
   <div class="container footer-container">
-    <div class="footer-logo"><img src="/images/enocsa4.jpeg" alt="Equipo ENOCSA"></div>
+    <div class="footer-logo"><img src="../images/enocsa4.jpeg" alt="Equipo ENOCSA"></div>
     <p><strong>ENOCSA: Empresa en Obras de Construcción S.A.</strong></p>
     <ul class="footer-links">
       <li><a href="#about"><strong>Nosotros</strong></a></li>
