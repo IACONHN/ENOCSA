@@ -446,27 +446,27 @@
 
       <div class="portfolio-card">
         <div class="card-images">
-          <img src="./images/proyectos25/reposicion-agua-potable/reposicion_agua_potable1.jpeg" class="active"
+          <img src="./images/proyectos25/reposicion-agua-potable/reposicion-agua-potable1.jpeg" class="active"
             alt="REPOSICION1">
-          <img src="./images/proyectos25/reposicion-agua-potable/reposicion_agua_potable2.jpeg" class="active"
+          <img src="./images/proyectos25/reposicion-agua-potable/reposicion-agua-potable2.jpeg" class="active"
             alt="REPOSICION2">
-          <img src="./images/proyectos25/reposicion-agua-potable/reposicion_agua_potable3.jpeg" class="active"
+          <img src="./images/proyectos25/reposicion-agua-potable/reposicion-agua-potable3.jpeg" class="active"
             alt="REPOSICION3">
-          <img src="./images/proyectos25/reposicion-agua-potable/reposicion_agua_potable4.jpeg" class="active"
+          <img src="./images/proyectos25/reposicion-agua-potable/reposicion-agua-potable4.jpeg" class="active"
             alt="REPOSICION4">
-          <img src="./images/proyectos25/reposicion-agua-potable/reposicion_agua_potable5.jpeg" class="active"
+          <img src="./images/proyectos25/reposicion-agua-potable/reposicion-agua-potable5.jpeg" class="active"
             alt="REPOSICION5">
-          <img src="./images/proyectos25/reposicion-agua-potable/reposicion_agua_potable6.jpeg" class="active"
+          <img src="./images/proyectos25/reposicion-agua-potable/reposicion-agua-potable6.jpeg" class="active"
             alt="REPOSICION6">
-          <img src="./images/proyectos25/reposicion-agua-potable/reposicion_agua_potable7.jpeg" class="active"
+          <img src="./images/proyectos25/reposicion-agua-potable/reposicion-agua-potable7.jpeg" class="active"
             alt="REPOSICION7">
-          <img src="./images/proyectos25/reposicion-agua-potable/reposicion_agua_potable8.jpeg" class="active"
+          <img src="./images/proyectos25/reposicion-agua-potable/reposicion-agua-potable8.jpeg" class="active"
             alt="REPOSICION8">
-          <img src="./images/proyectos25/reposicion-agua-potable/reposicion_agua_potable9.jpeg" class="active"
+          <img src="./images/proyectos25/reposicion-agua-potable/reposicion-agua-potable9.jpeg" class="active"
             alt="REPOSICION9">
-          <img src="./images/proyectos25/reposicion-agua-potable/reposicion_agua_potable10.jpeg" class="active"
+          <img src="./images/proyectos25/reposicion-agua-potable/reposicion-agua-potable10.jpeg" class="active"
             alt="REPOSICION10">
-          <img src="./images/proyectos25/reposicion-agua-potable/reposicion_agua_potable11.jpeg" class="active"
+          <img src="./images/proyectos25/reposicion-agua-potable/reposicion-agua-potable11.jpeg" class="active"
             alt="REPOSICION11">
           <div class="card-buttons">
             <button class="prev">&#10094;</button>
