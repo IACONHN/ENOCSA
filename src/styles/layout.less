@@ -1,34 +1,44 @@
-// Tipografía y body
-body {
-  font-family: @font-main;
-  color: @gris-piedra;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: @font-main;
-  font-weight: 600;
-  color: @azul-profundo;
-  margin-bottom: 1rem;
-}
-
-// Secciones
-section {
-  padding: @padding-section 2rem;
-}
-
+// ================================
 // Contenedor principal
+// ================================
 .container {
-  max-width: 1200px;
+  width: calc(100% - 3rem);
+  max-width: @ancho-contenedor;
   margin: 0 auto;
 }
 
-// Espaciado y uniformidad en grids
-.services-grid,
-.portfolio-grid {
-  display: grid;
-  gap: 2rem;
+// ================================
+// Espaciado de secciones
+// ================================
+section {
+  padding: @padding-section 0;
 }
 
+.section-heading {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  text-align: center;
+
+  span {
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    color: @azul-electrico;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+  }
+
+  p {
+    font-size: 1.02rem;
+  }
+
+  &.compact {
+    margin-bottom: 2rem;
+  }
+}

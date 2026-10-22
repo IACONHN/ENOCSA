@@ -1,12 +1,56 @@
+// ================================
+// Base general
+// ================================
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: @alto-navbar;
+}
+
 body {
   font-family: @font-main;
   color: @gris-piedra;
   background-color: @blanco-nieve;
-  line-height: 1.6;
+  line-height: 1.7;
+  padding-top: @alto-navbar;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid fade(@azul-electrico, 55%);
+  outline-offset: 4px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: @font-main;
+  color: @azul-profundo;
+  line-height: 1.2;
 }

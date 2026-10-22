@@ -1,120 +1,8 @@
-.portfolio {
-  background-color: lighten(@gris-piedra, 45%);
-  padding: 80px 0;
-
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 32px;
-  }
-
-  .portfolio-card:hover .card-images img.active {
-    transform: scale(1.08);
-  }
-
-
-  .portfolio-card {
-    background: @blanco-nieve;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
-    transition:
-      transform 0.35s ease,
-      box-shadow 0.35s ease;
-
-    will-change: transform;
-
-    .card-images {
-      position: relative;
-      height: 200px;
-      overflow: hidden;
-
-      img {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        cursor: pointer;
-
-        opacity: 0;
-        transform: scale(1.03);
-        transition:
-          opacity 0.35s ease,
-          transform 0.45s ease;
-
-        z-index: 1;
-      }
-
-      img.active {
-        opacity: 1;
-        transform: scale(1);
-        z-index: 2;
-      }
-
-      .card-buttons {
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        z-index: 3;
-
-        button {
-          pointer-events: all;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
-          border: none;
-          font-size: 24px;
-          background: rgba(0, 0, 0, .6);
-          color: #fff;
-          transition: transform 0.2s ease, background 0.2s ease;
-        }
-
-        button:hover {
-          transform: translateY(-50%) scale(1.1);
-          background: rgba(0, 0, 0, .85);
-        }
-
-        .prev {
-          left: 10px;
-        }
-
-        .next {
-          right: 10px;
-        }
-      }
-    }
-
-
-    h3 {
-      padding: 16px;
-      font-size: 1.1rem;
-      text-align: center;
-      line-height: 1.4;
-      transition: color 0.3s ease;
-    }
-
-    //HOVER EFECT//
-    &:hover {
-      transform: translateY(-8px) scale(1.015);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
-
-      .card-images img.active {
-        transform: scale(1.08);
-      }
-
-      h3 {
-        color: @azul-profundo;
-      }
-    }
-  }
-}
-
-
-
+// ================================
+// Portafolio
+// ================================
+.portfolio { padding: 80px 0; background: lighten(@gris-piedra, 45%); }
+.portfolio-projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
 //MODAL//
 .img-modal {
   position: fixed;
@@ -163,28 +51,203 @@
   }
 }
 
-//MOBILE//
-@media (max-width: 600px) {
-  .card-images {
-    height: 180px;
-  }
+// ================================
+// Proyectos destacados
+// ================================
+.featured-projects {
+  background: @cielo-palido;
+  padding: 80px 0;
 
-  .modal-btn {
-    font-size: 36px;
-  }
-
-  .close-modal {
-    font-size: 32px;
+  .section-heading {
+    margin-bottom: 0.75rem;
   }
 }
 
-@media (hover: none) {
-  .portfolio-card:hover {
-    transform: none;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+.featured-projects-instruction {
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
 
-    .card-images img.active {
-      transform: none;
-    }
+.featured-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.featured-project-card {
+  width: 100%;
+  height: 320px;
+  container-type: inline-size;
+  perspective: 1000px;
+  transition: transform 0.28s ease;
+}
+
+.featured-project-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.featured-project-card.is-flipped .featured-project-card-inner {
+  transform: rotateY(180deg);
+}
+
+.featured-project-card-face {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  box-shadow: 0 8px 20px rgba(0, 59, 92, 0.1);
+}
+
+.featured-project-card-front {
+  background: @blanco-nieve;
+}
+
+.featured-project-flip-button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  border: 0;
+  background: @blanco-nieve;
+  color: inherit;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 3px solid fade(@azul-electrico, 65%);
+    outline-offset: -5px;
+  }
+
+  img {
+    width: 100%;
+    height: 220px;
+    flex: 0 0 220px;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.featured-project-card-caption {
+  width: 100%;
+  height: 100px;
+  flex: 0 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.5rem 1.25rem;
+  color: @azul-profundo;
+  text-align: left;
+
+  strong {
+    font-size: clamp(0.85rem, 5cqi, 1.05rem);
+    line-height: 1.3;
+  }
+
+  .project-title-long {
+    font-size: clamp(0.64rem, 3.2cqi, 0.72rem);
+    line-height: 1.08;
+  }
+
+  small {
+    color: @azul-electrico;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+}
+.featured-project-card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.5rem;
+  background: @azul-profundo;
+  color: @blanco-nieve;
+  text-align: center;
+  transform: rotateY(180deg);
+
+  > strong {
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+
+  > span {
+    font-size: 0.95rem;
+  }
+}
+
+.featured-project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0.65rem 1.1rem;
+  border: 0;
+  border-radius: 8px;
+  background: @azul-electrico;
+  color: @blanco-nieve;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background: darken(@azul-electrico, 8%);
+    transform: translateY(-1px);
+  }
+
+  &:focus-visible {
+    outline: 3px solid @blanco-nieve;
+    outline-offset: 3px;
+  }
+
+  &.is-disabled,
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  &:disabled:hover {
+    background: @azul-electrico;
+    transform: none;
+  }
+}
+
+.featured-project-back-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: @cielo-palido;
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+
+  &:hover {
+    color: @blanco-nieve;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @blanco-nieve;
+    outline-offset: 3px;
+  }
+}
+
+@media (hover: hover) {
+  .featured-project-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .featured-project-card:not(.is-flipped):hover .featured-project-card-face {
+    box-shadow: 0 12px 26px rgba(0, 59, 92, 0.16);
   }
 }

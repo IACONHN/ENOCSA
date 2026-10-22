@@ -18,33 +18,72 @@ app.innerHTML = `
   ${footer}
 `;
 
-
-//Menú hamburguesa móvil//
+// ================================
+// Menú móvil
+// ================================
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
+function cerrarMenu() {
+  navLinks.classList.remove('active');
+  hamburger.classList.remove('active');
+  hamburger.setAttribute('aria-expanded', 'false');
+  hamburger.setAttribute('aria-label', 'Abrir menú');
+  document.body.classList.remove('menu-open');
+}
+
 hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-  hamburger.classList.toggle('active');
+  const menuAbierto = navLinks.classList.toggle('active');
+
+  hamburger.classList.toggle('active', menuAbierto);
+  hamburger.setAttribute('aria-expanded', String(menuAbierto));
+  hamburger.setAttribute('aria-label', menuAbierto ? 'Cerrar menú' : 'Abrir menú');
+  document.body.classList.toggle('menu-open', menuAbierto);
 });
 
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && navLinks.classList.contains('active')) {
+    cerrarMenu();
+  }
+});
 
-// Smooth scroll//
-document.querySelectorAll('.nav-links a, .footer-links a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 900) {
+    cerrarMenu();
+  }
+});
 
-    if (navLinks.classList.contains('active')) {
-      navLinks.classList.remove('active');
-      hamburger.classList.remove('active');
-    }
+// ================================
+// Navegación entre secciones
+// ================================
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', event => {
+    const destino = document.querySelector(link.getAttribute('href'));
+
+    if (!destino) return;
+
+    event.preventDefault();
+    destino.scrollIntoView({ behavior: 'smooth' });
+    cerrarMenu();
   });
 });
 
+// ================================
+// Tarjetas volteables
+// ================================
+document.querySelectorAll('[data-project-card]').forEach(card => {
+  const front = card.querySelector('.featured-project-card-front');
+  const back = card.querySelector('.featured-project-card-back');
 
-// Carrusel y Modal Portafolio//
+  front.addEventListener('click', () => card.classList.add('is-flipped'));
+  back.addEventListener('click', event => {
+    if (!event.target.closest('a')) card.classList.remove('is-flipped');
+  });
+});
+
+// ================================
+// Modal del portafolio
+// ================================
 const modal = document.getElementById('imgModal');
 const modalImg = modal.querySelector('img');
 const closeModalBtn = modal.querySelector('.close-modal');
@@ -53,119 +92,100 @@ const nextModalBtn = modal.querySelector('#nextModal');
 
 let modalImages = [];
 let currentModalIndex = 0;
-
-function openModal(index, images) {
-  modalImages = Array.from(images).map(img => img.src);
-  currentModalIndex = index;
-  modalImg.src = modalImages[currentModalIndex];
-  modal.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-  modal.style.display = 'none';
-  document.body.style.overflow = '';
-}
-
-function showModalImage(index) {
-  currentModalIndex = (index + modalImages.length) % modalImages.length;
-  modalImg.src = modalImages[currentModalIndex];
-}
-
-closeModalBtn.addEventListener('click', closeModal);
-modal.addEventListener('click', e => {
-  if (e.target === modal) closeModal();
-});
-
-prevModalBtn.addEventListener('click', e => {
-  e.stopPropagation();
-  showModalImage(currentModalIndex - 1);
-});
-
-nextModalBtn.addEventListener('click', e => {
-  e.stopPropagation();
-  showModalImage(currentModalIndex + 1);
-});
-
-//Carrusel por tarjeta//
-document.querySelectorAll('.portfolio-card').forEach(card => {
-  const slides = card.querySelectorAll('.card-images img');
-  const prevBtn = card.querySelector('.prev');
-  const nextBtn = card.querySelector('.next');
-  let index = 0;
-
-  function showSlide(i) {
-    slides.forEach((img, idx) => img.classList.toggle('active', idx === i));
-  }
-
-  prevBtn.addEventListener('click', e => {
-    e.stopPropagation();
-    index = (index - 1 + slides.length) % slides.length;
-    showSlide(index);
-  });
-
-  nextBtn.addEventListener('click', e => {
-    e.stopPropagation();
-    index = (index + 1) % slides.length;
-    showSlide(index);
-  });
-
-  slides.forEach((img, i) => {
-    img.addEventListener('click', e => {
-      e.stopPropagation();
-      openModal(i, slides);
-    });
-  });
-
-  showSlide(index);
-});
-
 let scale = 1;
 let startDist = 0;
 
-//Reset zoom al abrir modal//
 function resetZoom() {
   scale = 1;
   modalImg.style.transform = 'scale(1)';
 }
 
-//Ajustar openModal//
-const originalOpenModal = openModal;
-openModal = function(index, images) {
-  originalOpenModal(index, images);
+function openModal(index, images) {
+  modalImages = Array.from(images).map(img => img.src);
+  currentModalIndex = index;
+  modalImg.src = modalImages[currentModalIndex];
+  modalImg.alt = images[currentModalIndex]?.alt || 'Imagen ampliada del proyecto';
   resetZoom();
-};
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  closeModalBtn.focus();
+}
 
-modalImg.addEventListener('wheel', e => {
-  e.preventDefault();
+function closeModal() {
+  modal.style.display = 'none';
+  modalImg.src = '';
+  document.body.style.overflow = '';
+  resetZoom();
+}
 
-  scale += e.deltaY * -0.001;
+function showModalImage(index) {
+  currentModalIndex = (index + modalImages.length) % modalImages.length;
+  modalImg.src = modalImages[currentModalIndex];
+  resetZoom();
+}
+
+closeModalBtn.addEventListener('click', closeModal);
+
+modal.addEventListener('click', event => {
+  if (event.target === modal) closeModal();
+});
+
+prevModalBtn.addEventListener('click', event => {
+  event.stopPropagation();
+  showModalImage(currentModalIndex - 1);
+});
+
+nextModalBtn.addEventListener('click', event => {
+  event.stopPropagation();
+  showModalImage(currentModalIndex + 1);
+});
+
+// ================================
+// Teclado para el modal
+// ================================
+document.addEventListener('keydown', event => {
+  if (modal.style.display !== 'flex') return;
+
+  if (event.key === 'Escape') closeModal();
+  if (event.key === 'ArrowLeft') showModalImage(currentModalIndex - 1);
+  if (event.key === 'ArrowRight') showModalImage(currentModalIndex + 1);
+});
+
+// ================================
+// Zoom con rueda del mouse
+// ================================
+modalImg.addEventListener('wheel', event => {
+  event.preventDefault();
+
+  scale += event.deltaY * -0.001;
   scale = Math.min(Math.max(1, scale), 3);
-
   modalImg.style.transform = `scale(${scale})`;
 }, { passive: false });
 
-//ZOOM TÁCTIL (PINCH)//
-modalImg.addEventListener('touchstart', e => {
-  if (e.touches.length === 2) {
-    startDist = getDistance(e.touches[0], e.touches[1]);
+// ================================
+// Zoom táctil
+// ================================
+modalImg.addEventListener('touchstart', event => {
+  if (event.touches.length === 2) {
+    startDist = getDistance(event.touches[0], event.touches[1]);
   }
 });
 
-modalImg.addEventListener('touchmove', e => {
-  if (e.touches.length === 2) {
-    e.preventDefault();
-    const newDist = getDistance(e.touches[0], e.touches[1]);
-    scale *= newDist / startDist;
-    scale = Math.min(Math.max(1, scale), 3);
-    modalImg.style.transform = `scale(${scale})`;
-    startDist = newDist;
-  }
+modalImg.addEventListener('touchmove', event => {
+  if (event.touches.length !== 2) return;
+
+  event.preventDefault();
+
+  const newDist = getDistance(event.touches[0], event.touches[1]);
+  scale *= newDist / startDist;
+  scale = Math.min(Math.max(1, scale), 3);
+  modalImg.style.transform = `scale(${scale})`;
+  startDist = newDist;
 }, { passive: false });
 
-function getDistance(t1, t2) {
+function getDistance(touch1, touch2) {
   return Math.hypot(
-    t2.clientX - t1.clientX,
-    t2.clientY - t1.clientY
+    touch2.clientX - touch1.clientX,
+    touch2.clientY - touch1.clientY
   );
 }

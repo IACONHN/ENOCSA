@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+
+:root {
+  font-family: Montserrat, Arial, sans-serif;
+  color: #4A4A4A;
+  background: #FFFFFF;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-width: 0;
+  margin: 0;
+  line-height: 1.6;
+  background: #f7fafc;
+}
+
+.project-page { width: min(1200px, calc(100% - 3rem)); margin: 0 auto; padding: 3.5rem 0 4rem; }
+.project-eyebrow, .gallery-eyebrow { margin: 0 0 .35rem; color: #00A3E0; font-size: .78rem; font-weight: 800; letter-spacing: .12em; }
+.project-page h1 { margin: 0 0 2rem; color: #003B5C; font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.2; }
+.project-description { margin-bottom: 1.75rem; padding: 1.5rem; border-left: 3px solid #00A3E0; border-radius: 0 10px 10px 0; background: #FFFFFF; box-shadow: 0 5px 16px rgba(0, 59, 92, .08); }
+.project-description h2, .project-gallery-title { margin: 0 0 .5rem; color: #003B5C; font-size: 1.35rem; }
+.project-description p, .gallery-intro { margin: 0; }
+.project-details { margin: 0 0 3rem; padding: 1.5rem; border-radius: 10px; background: #FFFFFF; box-shadow: 0 5px 16px rgba(0, 59, 92, .08); }
+.project-details-section + .project-details-section { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #B9D9EB; }
+.project-details h2 { margin: 0 0 .5rem; color: #003B5C; font-size: 1.35rem; }
+.project-details p { margin: 0; }
+.project-details ul { margin: .5rem 0 0; padding-left: 1.2rem; }
+.project-details li + li { margin-top: .3rem; }
+.project-summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin: 0 0 3rem; }
+.project-summary-item { min-width: 0; padding: 1rem; border-top: 3px solid #00A3E0; border-radius: 8px; background: #B9D9EB; }
+.project-summary-item dt { color: #003B5C; font-size: .72rem; font-weight: 800; letter-spacing: .08em; }
+.project-summary-item dd { margin: .25rem 0 0; color: #4A4A4A; font-weight: 700; }
+.gallery-header { margin-bottom: 1.25rem; }
+.project-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.project-gallery [hidden] { display: none !important; }
+.project-gallery img { width: 100%; height: 220px; display: block; border-radius: 10px; object-fit: cover; box-shadow: 0 4px 12px rgba(0, 59, 92, .12); }
+.project-gallery img:not([hidden]) { cursor: zoom-in; }
+.gallery-toggle, .back-to-portfolio { display: inline-flex; align-items: center; justify-content: center; margin-top: 1.75rem; padding: .75rem 1.1rem; border: 0; border-radius: 8px; background: #003B5C; color: #FFFFFF; font: inherit; font-weight: 700; text-decoration: none; cursor: pointer; transition: background-color .2s ease; }
+.gallery-toggle:hover, .back-to-portfolio:hover { background: #00A3E0; }
+.back-to-portfolio { margin-top: 3rem; }
+#project-footer { background: #003B5C; color: #FFFFFF; font-family: 'Montserrat', sans-serif; }
+.project-footer-content { width: min(1200px, calc(100% - 3rem)); margin: 0 auto; padding: 2.5rem 0 1rem; display: grid; grid-template-columns: 1.15fr .7fr 1.25fr; gap: 2.5rem; align-items: start; }
+.project-footer-brand { margin: 0; }
+.project-footer-brand img { width: 100%; max-width: 320px; height: auto; display: block; margin-bottom: 1rem; }
+.project-footer-title, .project-footer-heading { margin: 0 0 .6rem; color: #FFFFFF; font-size: 1.05rem; font-weight: 700; }
+.project-footer-links { margin: 0; padding: 0; list-style: none; }
+.project-footer-links li + li { margin-top: .55rem; }
+#project-footer a { color: #FFFFFF; text-decoration: none; }
+#project-footer a:hover { color: #B9D9EB; }
+.project-footer-contact p, .project-footer-contact address { margin: 0 0 .6rem; font-style: normal; }
+.project-footer-contact i { width: 24px; color: #B9D9EB; }
+.project-footer-bottom { width: min(1200px, calc(100% - 3rem)); margin: 2rem auto 0; padding: 1rem 0 0; border-top: 1px solid rgba(255,255,255,.18); text-align: center; font-size: .9rem; }
+.project-footer-bottom p { margin: 0; }
+
+.project-lightbox { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 2rem 4.5rem; background: rgba(0, 0, 0, .82); }
+.project-lightbox[hidden] { display: none; }
+.project-lightbox-content { position: relative; display: grid; place-items: center; width: min(100%, 1100px); }
+.project-lightbox-image { display: block; max-width: 100%; max-height: calc(100vh - 4rem); border-radius: 10px; background: #FFFFFF; object-fit: contain; }
+.project-lightbox-button { position: absolute; display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border: 0; border-radius: 50%; background: rgba(0, 59, 92, .9); color: #FFFFFF; font: inherit; font-size: 1.75rem; line-height: 1; cursor: pointer; }
+.project-lightbox-button:hover { background: #00A3E0; }
+.project-lightbox-close { top: -1.25rem; right: -1.25rem; }
+.project-lightbox-previous { left: -3.75rem; top: 50%; transform: translateY(-50%); }
+.project-lightbox-next { right: -3.75rem; top: 50%; transform: translateY(-50%); }
+@media (max-width: 900px) { .project-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); } .project-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } .project-footer-content { grid-template-columns: repeat(2, minmax(0, 1fr)); } .project-footer-contact { grid-column: 1 / -1; } }
+@media (max-width: 600px) { .project-page { width: min(100% - 2rem, 1200px); padding: 2.5rem 0 3rem; } .project-summary, .project-gallery, .project-footer-content { grid-template-columns: 1fr; } .project-footer-contact { grid-column: auto; } .project-gallery img { height: 210px; } .project-footer-content, .project-footer-bottom { width: min(100% - 2rem, 1200px); } .project-footer-brand img { max-width: 260px; margin-left: auto; margin-right: auto; } }
+@media (max-width: 600px) { .project-lightbox { padding: 1rem 3.25rem; } .project-lightbox-image { max-height: calc(100vh - 2rem); } .project-lightbox-close { top: -.75rem; right: -.75rem; } .project-lightbox-previous { left: -2.75rem; } .project-lightbox-next { right: -2.75rem; } }
