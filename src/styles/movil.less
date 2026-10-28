@@ -1,7 +1,45 @@
 // ================================
 // Tablet y móvil
 // ================================
+@media (min-width: 1101px) {
+  .hero {
+    .overlay {
+      position: relative;
+    }
+
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 56%;
+      margin: 0;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  .hero {
+    .hero-content {
+      width: min(42vw, 500px);
+      margin-right: 5vw;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 5.5vw, 3.8rem);
+    }
+  }
+}
+
 @media (max-width: 900px) {
+  .hero {
+    background-position: 58% center;
+
+    .hero-content {
+      width: min(54vw, 500px);
+      margin-right: 6vw;
+    }
+  }
+
   .hamburger {
     display: flex;
     position: relative;
@@ -99,16 +137,22 @@
   }
 
   .hero {
-    min-height: calc(88vh - 74px);
-    background-position: center;
+    min-height: calc(90vh - 74px);
+    background-position: 72% center;
 
     .overlay {
-      min-height: calc(88vh - 74px);
-      background: rgba(0, 59, 92, 0.68);
+      min-height: calc(90vh - 74px);
+      background: rgba(0, 59, 92, 0.62);
+    }
+
+    .hero-content {
+      width: calc(100% - 2rem);
+      max-width: 540px;
+      margin: 0 auto;
     }
 
     h1 {
-      font-size: clamp(2.15rem, 11vw, 3.1rem);
+      font-size: clamp(2.1rem, 10vw, 3rem);
     }
   }
 

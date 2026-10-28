@@ -109,17 +109,18 @@
 .hero {
   min-height: calc(100vh - @alto-navbar);
   padding: 0;
-  background: url('/images/eslogan3.jpeg') center / cover no-repeat;
+  background: url('/images/eslogan3.jpeg') center center / cover no-repeat;
 
   .overlay {
     min-height: calc(100vh - @alto-navbar);
     display: flex;
     align-items: center;
-    background: rgba(0, 59, 92, 0.4);
+    background: linear-gradient(90deg, rgba(0, 59, 92, 0.18) 0%, rgba(0, 59, 92, 0.3) 45%, rgba(0, 59, 92, 0.54) 100%);
   }
 
   .hero-content {
-    max-width: 790px;
+    width: min(40vw, 590px);
+    max-width: 590px;
     color: @blanco-nieve;
   }
 
@@ -133,10 +134,10 @@
   }
 
   h1 {
-    max-width: 760px;
+    max-width: 590px;
     margin-bottom: 1.3rem;
     color: @blanco-nieve;
-    font-size: clamp(2.6rem, 6vw, 4.6rem);
+    font-size: clamp(2.7rem, 6.2vw, 4.9rem);
   }
 
   .hero-subtitle {
